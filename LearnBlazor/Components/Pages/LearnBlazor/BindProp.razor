@@ -5,7 +5,8 @@
 Name : @product.Name <br />
 IsActive : @product.IsActive  <br />
 Price : @product.Price  <br />
-Input Price : <input type="number" @bind="@product.Price" @bind:event="oninput" /> <br />
+This Product is : @(product.IsActive ? "Active" : "InActive") <br/>
+IsActive : <input type="checkbox" @bind="@product.IsActive" /> <br />
 Input Price : <input type="number" @bind-value="@product.Price" @bind-value:event="oninput" /> 
 
 @code {
@@ -13,7 +14,7 @@ Input Price : <input type="number" @bind-value="@product.Price" @bind-value:even
         {
             Id = 1,
             Name = "Product 1",
-            IsActive = true,
+            IsActive = false,
             Price = 5
         };
 }
