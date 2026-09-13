@@ -3,13 +3,17 @@
 <h3>Product - Data Binding</h3>
 
 Name : @product.Name <br />
-IsActive : @product.IsActive  <br />  
+IsActive : @product.IsActive  <br />
+Price : @product.Price  <br />
+Input Price : <input type="number" @bind="@product.Price" @bind:event="oninput" /> <br />
+Input Price : <input type="number" @bind-value="@product.Price" @bind-value:event="oninput" /> 
 
 @code {
     Models.Product product = new()
         {
             Id = 1,
             Name = "Product 1",
-            IsActive = true
+            IsActive = true,
+            Price = 5
         };
 }
