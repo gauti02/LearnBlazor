@@ -1,7 +1,15 @@
 ﻿@page "/learnblazor/bindprop"
 
-<h3>BindProp</h3>
+<h3>Product - Data Binding</h3>
+
+Name : @product.Name <br />
+IsActive : @product.IsActive  <br />  
 
 @code {
-
+    Models.Product product = new()
+        {
+            Id = 1,
+            Name = "Product 1",
+            IsActive = true
+        };
 }
